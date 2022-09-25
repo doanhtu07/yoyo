@@ -11,9 +11,9 @@
     "mvPublic": "cp -R src/public dist/public",
     "bundle": "rollup -c",
     "build": "yarn reset && tsc && npm-run-all mvPublic bundle",
-    "prestart": "yarn build",
     "start": "node .",
-    "dev": "nodemon --watch src -e ts,html,css --exec yarn start"
+    "dev:exec": "yarn build && yarn start",
+    "dev": "nodemon --watch src -e ts,html,css --exec yarn dev:exec"
   },
   "dependencies": {
     "@rollup/plugin-commonjs": "^22.0.2",
