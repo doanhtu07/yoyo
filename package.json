@@ -2,7 +2,7 @@
   "name": "yoyo",
   "version": "1.0.0",
   "description": "A search engine for shortcuts to websites",
-  "main": "dist/server.js",
+  "main": "dist/index.js",
   "repository": "https://github.com/doanhtu07/yoyo.git",
   "author": "doanhtu07 <doanhtu07@gmail.com>",
   "license": "MIT",
