@@ -40,6 +40,10 @@ export const COMMANDS: CommandType = {
   },
   facebook: "fb",
 
+  gm: {
+    name: "Gmail",
+    link: "https://mail.google.com",
+  },
   cal: {
     name: "Calendar",
     link: "https://calendar.google.com/calendar/u/0/r?tab=oc",
