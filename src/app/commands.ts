@@ -95,4 +95,20 @@ export const COMMANDS: CommandType = {
     link: "https://www.leetcode.com",
   },
   leet: "le",
+
+  aws: {
+    name: "Amazon",
+    link: "https://www.amazon.com/",
+  },
+
+  fig: {
+    name: "Figma",
+    link: "https://www.figma.com",
+  },
+  figma: "fig",
+
+  notes: {
+    name: "Apple Notes",
+    link: "notes://",
+  },
 };
