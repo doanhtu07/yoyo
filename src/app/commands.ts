@@ -28,10 +28,11 @@ export const alternativesMap = (): Record<string, string[]> => {
  */
 
 export const COMMANDS: CommandType = {
-  help: {
+  h: {
     name: "Yoyo Guide",
     link: "https://yoyo-shortcut.herokuapp.com/",
   },
+  help: "h",
 
   fb: {
     name: "Facebook",
@@ -60,20 +61,32 @@ export const COMMANDS: CommandType = {
     link: "vscode://",
   },
 
-  outl: {
+  out: {
     name: "Outlook",
     link: "ms-outlook://",
   },
-  outlook: "outl",
+  outlook: "out",
 
-  notion: {
+  no: {
     name: "Notion",
     link: "notion://",
   },
+  notion: "no",
 
-  disc: {
+  dis: {
     name: "Discord",
     link: "discord://",
   },
-  discord: "disc",
+  discord: "dis",
+
+  li: {
+    name: "doanhtu07's LinkedIn",
+    link: "https://www.linkedin.com/in/anh-tu-do-77458820a/",
+  },
+  linkedin: "li",
+
+  g: {
+    name: "Google",
+    link: "https://www.google.com",
+  },
 };
