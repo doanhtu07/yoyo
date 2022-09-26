@@ -89,4 +89,10 @@ export const COMMANDS: CommandType = {
     name: "Google",
     link: "https://www.google.com",
   },
+
+  le: {
+    name: "Leetcode",
+    link: "https://www.leetcode.com",
+  },
+  leet: "le",
 };
