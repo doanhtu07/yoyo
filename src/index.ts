@@ -1,6 +1,6 @@
 import express from "express";
 import path from "path";
-import { COMMANDS } from "./app/commands.js";
+import { alternativesMap, COMMANDS, InfoPack } from "./app/commands.js";
 import cron from "cron";
 import axios from "axios";
 
@@ -45,7 +45,12 @@ app.get("/", (req, res) => {
 
   if (COMMANDS[command] != undefined) {
     const pack = COMMANDS[command];
-    res.redirect(pack.link);
+    if (typeof pack === "object") {
+      res.redirect(pack.link);
+    } else {
+      const alternative = pack;
+      res.redirect((COMMANDS[alternative] as InfoPack).link);
+    }
   }
 });
 

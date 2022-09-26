@@ -13,7 +13,8 @@
     "build": "yarn reset && tsc && npm-run-all mvPublic bundle",
     "start": "node .",
     "dev:exec": "yarn build && yarn start",
-    "dev": "nodemon --watch src -e ts,html,css --exec yarn dev:exec"
+    "dev": "nodemon --watch src -e ts,html,css --exec yarn dev:exec",
+    "deploy": "git push heroku main"
   },
   "dependencies": {
     "@rollup/plugin-commonjs": "^22.0.2",
