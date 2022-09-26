@@ -1,6 +1,6 @@
 import express from "express";
 import path from "path";
-import { alternativesMap, COMMANDS, InfoPack } from "./app/commands.js";
+import { COMMANDS, InfoPack } from "./app/commands.js";
 import cron from "cron";
 import axios from "axios";
 
@@ -9,20 +9,23 @@ import axios from "axios";
 const app = express();
 const port = process.env.PORT || 3000;
 
-const CronJob = cron.CronJob;
-const pingHerokuServer = new CronJob("0 */10 * * * *", function () {
-  console.log("Ping at: ", new Date().toString());
-  axios
-    .get("https://yoyo-shortcut.herokuapp.com/")
-    .then(() => {
-      console.log("Successfully ping!");
-    })
-    .catch((err) => {
-      console.error(new Error(String(err)));
-    });
-});
-// That means we are on a server
-if (port !== 3000) {
+// Set these variables on Heroku
+const nodeEnv = process.env.NODE_ENV || "development";
+const serverUrl = process.env.SERVER_URL;
+
+if (nodeEnv === "production") {
+  const CronJob = cron.CronJob;
+  const pingHerokuServer = new CronJob("0 */10 * * * *", function () {
+    console.log("Ping at: ", new Date().toString());
+    axios
+      .get(serverUrl)
+      .then(() => {
+        console.log("Successfully ping!");
+      })
+      .catch((err) => {
+        console.error(new Error(String(err)));
+      });
+  });
   pingHerokuServer.start();
 }
 
