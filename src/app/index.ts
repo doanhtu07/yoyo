@@ -19,8 +19,6 @@ function AddShortcutsToTable() {
       });
     }
 
-    console.log(map, allShortcuts);
-
     $("#help-table").append(`
         <tr>
             <td>${allShortcuts}</td>
