@@ -44,6 +44,10 @@ export const COMMANDS: CommandType = {
     name: "Calendar",
     link: "https://calendar.google.com/calendar/u/0/r?tab=oc",
   },
+  dr: {
+    name: "Google Drive",
+    link: "https://drive.google.com/",
+  },
   el: {
     name: "Elearning",
     link: "http://elearning.utdallas.edu/",
