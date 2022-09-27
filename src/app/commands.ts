@@ -119,4 +119,9 @@ export const COMMANDS: CommandType = {
     name: "Apple Notes",
     link: "notes://",
   },
+
+  gr: {
+    name: "GroupMe",
+    link: "https://groupme.com/",
+  },
 };
