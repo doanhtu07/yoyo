@@ -124,4 +124,9 @@ export const COMMANDS: CommandType = {
     name: "GroupMe",
     link: "https://groupme.com/",
   },
+
+  ore: {
+    name: "O'reilly",
+    link: "https://learning.oreilly.com/home/",
+  },
 };
