@@ -129,4 +129,9 @@ export const COMMANDS: CommandType = {
     name: "O'reilly",
     link: "https://learning.oreilly.com/home/",
   },
+
+  rep: {
+    name: "Replit",
+    link: "https://replit.com/~",
+  },
 };
