@@ -134,4 +134,9 @@ export const COMMANDS: CommandType = {
     name: "Replit",
     link: "https://replit.com/~",
   },
+
+  hs: {
+    name: "Handshake UTD",
+    link: "https://utdallas.joinhandshake.com/",
+  },
 };
