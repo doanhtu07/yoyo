@@ -127,7 +127,7 @@ export const COMMANDS: CommandType = {
 
   ore: {
     name: "O'reilly",
-    link: "https://learning.oreilly.com/home/",
+    link: "https://www.oreilly.com/library-access/",
   },
 
   rep: {
