@@ -139,4 +139,9 @@ export const COMMANDS: CommandType = {
     name: "Handshake UTD",
     link: "https://utdallas.joinhandshake.com/",
   },
+
+  cl: {
+    name: "ClickUp",
+    link: "https://app.clickup.com/",
+  },
 };
