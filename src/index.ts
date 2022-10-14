@@ -13,21 +13,21 @@ const port = process.env.PORT || 3000;
 const nodeEnv = process.env.NODE_ENV || "development";
 const serverUrl = process.env.SERVER_URL;
 
-if (nodeEnv === "production") {
-  const CronJob = cron.CronJob;
-  const pingHerokuServer = new CronJob("0 */10 * * * *", function () {
-    console.log("Ping at: ", new Date().toString());
-    axios
-      .get(serverUrl)
-      .then(() => {
-        console.log("Successfully ping!");
-      })
-      .catch((err) => {
-        console.error(new Error(String(err)));
-      });
-  });
-  pingHerokuServer.start();
-}
+// if (nodeEnv === "production") {
+//   const CronJob = cron.CronJob;
+//   const pingHerokuServer = new CronJob("0 */10 * * * *", function () {
+//     console.log("Ping at: ", new Date().toString());
+//     axios
+//       .get(serverUrl)
+//       .then(() => {
+//         console.log("Successfully ping!");
+//       })
+//       .catch((err) => {
+//         console.error(new Error(String(err)));
+//       });
+//   });
+//   pingHerokuServer.start();
+// }
 
 // Static files served inside HTML
 app.use("/public", express.static(path.join(__dirname, "public")));
